@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>main page</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    </head>
+    <body>
+        <h1>Main Page</h1>
+        <hr>
+        <h2>Faculty List</h2>
+        {% for f in faculty %}
+            <h4>{{ f.username }}</h4>
+        {% endfor %}
+        <hr>
+        <a href="{% url 'faculty_form' %}">Faculty Registration</a>
+    </body>
+</html>
