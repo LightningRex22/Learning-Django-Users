@@ -19,4 +19,5 @@ class Faculty(AbstractUser):
         ]
     degree = models.CharField(max_length=20, choices=degrees, blank=True)
     department = models.CharField(max_length=20, choices=departments, blank=True)
-    subject = models.CharField(max_length=100)
+    course = models.CharField(max_length=100, blank=True, null=True)
+    subject = models.CharField(max_length=100, blank=True, null=True)
